@@ -38,7 +38,7 @@ export class HomePage {
             this.waitUntilPageLoaded()
             
             cy.wrap(this.forecastWeather.getTemperatureInfo()).then($newTemp => {  
-                assert.notEqual(currentTemp, $newTemp[0], "Temperature before & after convert are same")
+                assert.notEqual(currentTemp, $newTemp[0], "Temperature before & after convert are still the same")
                 //assert.equal(convertedTemp, $newTemp[0], "Temperature is changed")
             })
         })
