@@ -1,0 +1,38 @@
+[
+  { 
+    "case": "SQL injection",
+    "name": "abc OR 1=1"
+  },
+  {
+    "case": "SQL injection",
+    "name" : "' or ''='"
+  },
+  {
+    "case": "XSS",
+    "name": "<script>alert('xss');</script>"
+  },
+  {
+    "case": "Javascript",
+    "name": "javascript:alert(document.cookie);"
+  },
+  {
+    "case": "Javascript",
+    "name": "javascript:void(document.cookie=\"authorization=true\");"
+  },
+  {
+    "case": "Search with HTML tags",
+    "name": "<h1>automation</h1>"
+  },
+  {
+    "case": "Search with email",
+    "name": "hoangnguyenletran@gmail.com"
+  },
+  {
+    "case": "Search with some SQL wildcards",
+    "name": "Ve_is"
+  },
+  {
+    "case": "Search with url link",
+    "name": "city/3117735"
+  }  
+]

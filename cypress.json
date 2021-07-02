@@ -1,0 +1,31 @@
+{
+  "viewportWidth": 1280,
+  "viewportHeight": 800,
+  "pageLoadTimeout": 300000,
+  "defaultCommandTimeout": 15000,
+  "baseUrl": "https://openweathermap.org",
+  "retries": {
+    "runMode": 2,
+    "openMode": 1
+  },
+  "projectId": "dcxxxf",
+ 
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "cypress-mochawesome-reporter, cypress-sonarqube-reporter",
+    "cypressMochawesomeReporterReporterOptions": {
+      "reportDir": "cypress/report",
+      "charts": true,
+      "reportPageTitle": "Open Weather Map automation",
+      "embeddedScreenshots" : true
+    },
+    "cypressSonarqubeReporterReporterOptions": {
+      "overwrite" : true
+		}   
+  },
+  "env": {
+    "browserPermissions": {    
+      "geolocation": "allow"
+    }
+  }
+}

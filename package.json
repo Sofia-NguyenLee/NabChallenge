@@ -1,0 +1,36 @@
+{
+  "name": "open_weather_map",
+  "version": "1.0.0",
+  "description": "NAB QA Challenge",
+  "main": "index.js",
+  "dependencies": {
+    "dayjs": "^1.10.5",
+    "mocha": "^9.0.1"
+  },
+  "devDependencies": {
+    "cypress": "^7.6.0",
+    "cypress-browser-permissions": "^1.0.5",
+    "cypress-cucumber-preprocessor": "^4.1.2",
+    "cypress-mochawesome-reporter": "^2.2.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-sonarqube-reporter": "^1.7.1",
+    "cypress-xpath": "^1.6.2"
+  },
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:run": "cypress run --record --key 0b2825f6-9585-473c-87ca-c285ea241aee",
+    "e2e:chrome": "npm run cypress:run --browser chrome",
+    "e2e:firefox": "npm run cypress:run --browser firefox",
+    "e2e:parallel": "npm run cypress:run --parallel",
+
+    "cy:verify": "cypress verify",
+    "cy:info": "cypress info",
+    "cy:version": "cypress version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nguyen-Lee/3PLSpellingCms.git"
+  },
+  "author": "Sofia Nguyen Lee",
+  "license": "ISC"
+}

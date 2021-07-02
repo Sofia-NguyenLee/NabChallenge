@@ -1,0 +1,22 @@
+[
+    {    
+        "case": "Search with @",
+        "name": "@@"          
+    },
+    {    
+        "case": "Search with #",
+        "name": "#2196f3"          
+    },
+    {    
+        "case": "Search with special characters",
+        "name": "%"          
+    },
+    {    
+        "case": "Search with special characters",
+        "name": "*"          
+    },
+    {    
+        "case": "Search with special characters",
+        "name": "\\"          
+    }
+]

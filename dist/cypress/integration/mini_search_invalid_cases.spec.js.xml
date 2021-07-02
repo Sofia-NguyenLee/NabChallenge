@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testExecutions version="1">
+  <file path="cypress/integration/mini_search_invalid_cases.spec.js">
+    <testCase name="DESKTOP mode - Call current weather data for for invalid equivalence class - Search weather with invalid city" duration="23622"/>
+    <testCase name="DESKTOP mode - Call current weather data for for invalid equivalence class - Search weather with injection data" duration="31583"/>
+  </file>
+</testExecutions>

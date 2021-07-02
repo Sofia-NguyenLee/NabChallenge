@@ -1,0 +1,19 @@
+[   
+  {
+    "case": "Search with city name not in file",
+    "name": "Nghệ An"
+  },
+  {
+    "case": "Search with city name as substring in file",
+    "name": "Bà Rịa-Vũng Tàu"
+  },  
+  {
+    "case": "Search by city name & invalid country code",
+    "name": "London",
+    "country": "ID"
+  },
+  {
+    "case": "Search with regex",
+    "name": "[^0-9]"
+  }
+]

@@ -1,0 +1,37 @@
+[  
+    {
+        "case": "Seach by city name with redundant spaces",
+        "name": "    Busan   ",
+        "timezone": "Asia/Seoul"
+    },
+    {
+        "case": "Seach by city name with Unicode characters",
+        "name": "Thủ Ðô Hà Nội",
+        "timezone": "Asia/Bangkok"
+    },
+    {
+        "case": "Seach by city name with hyphen & special accent characters",
+        "name": "Villedieu-la-Blouère",
+        "timezone": "Europe/Paris"
+    },
+    {
+        "case": "Search by valid city name, state code & country code",
+        "name": "London",
+        "state": "KY",
+        "country": "US",
+        "timezone": "America/New_York"
+    },    
+    {
+        "case": "Search by city name, invalid state code & valid country code",
+        "name": "Manhattan",
+        "state": "KY",
+        "country": "US",
+        "timezone": "America/Chicago"      
+    },
+    {
+        "case": "Search by valie city name & country code",
+        "name": "Sydney",
+        "country": "AU",
+        "timezone": "Australia/Sydney"
+    }
+]
