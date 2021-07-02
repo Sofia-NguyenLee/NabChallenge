@@ -36,7 +36,7 @@ jobs:
             
       - run:
           name: 'Run Cypress tests'
-          command: npm run e2e:chrome
+          command: npm run e2e:chrome -- --env circle=true
           no_output_timeout: 10m
       - store_artifacts:
           path: cypress\screenshots
@@ -72,6 +72,7 @@ jobs:
           name: 'Run Cypress tests'
           command: npm run e2e:firefox
           no_output_timeout: 10m
+          when: on_success
       - store_artifacts:
           path: cypress\screenshots
       - store_artifacts:
@@ -88,8 +89,7 @@ workflows:
   mac-build:
     jobs:
       - cypress/install:
-          name: 'Mac install'          
-          build: 'npm run build'          
+          name: 'Mac install'                            
 
       - cypress/run:
           name: Mac test

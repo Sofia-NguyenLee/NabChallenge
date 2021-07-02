@@ -9,11 +9,10 @@ describe(specTitle('Convert temperature for default location'), function() {
         })
     }) 
 
-    it("Convert temperature", function() {
+    it("Verify feature geolocation doesn't work", function() {
         homePage.getForecastWeather().getDisplayedCity().then($element => {
-            // cy.log('My location: ' + $element.text())
-            assert.isAbove($element.text().indexOf('VN'), 0)
+            cy.log('Allocated location: ' + $element.text())
+            assert.equal($element.text().indexOf('VN'), -1)
         })
-        homePage.convertTemperature()
     })
 })

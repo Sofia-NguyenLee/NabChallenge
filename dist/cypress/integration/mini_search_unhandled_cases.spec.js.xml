@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testExecutions version="1">
   <file path="cypress/integration/mini_search_unhandled_cases.spec.js">
-    <testCase name="DESKTOP mode - Search with cases that the site doesn't handle now - Search weather with special data" duration="27385"/>
+    <testCase name="DESKTOP mode - Search with cases that the site doesn't handle now - Search weather with special data" duration="22494"/>
   </file>
 </testExecutions>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testExecutions version="1">
   <file path="cypress/integration/mini_search_valid_cases.spec.js">
-    <testCase name="DESKTOP mode - Call current weather data for valid equivalence class - Search weather by valid city" duration="39533">
-      <failure message="AssertionError: expected 57 to equal '58'"><![CDATA[AssertionError: expected 57 to equal '58'
-    at Context.eval (https://openweathermap.org/__cypress/tests?p=cypress\integration\mini_search_valid_cases.spec.js:268:16)]]></failure>
-    </testCase>
+    <testCase name="DESKTOP mode - Call current weather data for valid equivalence class - Search weather by valid city" duration="84822"/>
   </file>
 </testExecutions>
