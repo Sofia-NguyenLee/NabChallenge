@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testExecutions version="1">
   <file path="cypress/integration/mini_search_valid_cases.spec.js">
-    <testCase name="DESKTOP mode - Call current weather data for valid equivalence class - Search weather by valid city" duration="84822"/>
+    <testCase name="DESKTOP mode - Call current weather data for valid equivalence class - Search weather by valid city" duration="84170"/>
   </file>
 </testExecutions>

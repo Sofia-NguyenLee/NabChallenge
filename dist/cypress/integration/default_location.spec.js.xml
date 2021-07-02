@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testExecutions version="1">
   <file path="cypress/integration/default_location.spec.js">
-    <testCase name="Convert temperature for default location - Verify feature geolocation doesn't work" duration="10442"/>
+    <testCase name="Convert temperature for default location - Verify feature geolocation doesn't work" duration="10823"/>
   </file>
 </testExecutions>
