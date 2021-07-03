@@ -19,6 +19,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    echo "Build step"
+                    
                     def myRepo = checkout scm
                     def gitCommit = myRepo.GIT_COMMIT
                     GIT_BRANCH = myRepo.GIT_BRANCH
