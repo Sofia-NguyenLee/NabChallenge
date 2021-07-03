@@ -1,0 +1,7 @@
+steps {
+    dir('C:/WINDOWS/system32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/NabChallenge') {
+        bat label: 'Install NPM package', script: 'npm install '
+        bat label: 'Install Cypress', script: 'npm install -D cypress'
+        bat label: 'Run test', script: 'npm run "e2e:chrome"'
+    }
+} 
