@@ -25,8 +25,8 @@ pipeline {
                     def shortGitCommit = "v-${gitCommit[0..6]}"
                     DEPLOY_VERSION = "${shortGitCommit}-${BUILD_NUMBER}"
 
-                    npm install
-                    npm install -D cypress
+                    sh 'npm install'
+                    sh 'npm install -D cypress'
                 }
             }
         }
