@@ -47,7 +47,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    
+                        echo "deploying ${GIT_BRANCH} branch to GCP"
                     }
                     else{
                         echo "Don't deploy ${GIT_BRANCH} branch to GCP"
