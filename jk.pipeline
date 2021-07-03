@@ -47,6 +47,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
+                    if(params.WILL_DEPLOY == true){
                         echo "deploying ${GIT_BRANCH} branch to GCP"
                     }
                     else{
