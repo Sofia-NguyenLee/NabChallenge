@@ -27,7 +27,6 @@ pipeline {
 
                     npm install
                     npm install -D cypress
-                    npm run "e2e:chrome"                
                 }
             }
         }
@@ -35,8 +34,9 @@ pipeline {
             steps {
                 script {
                     if(params.RUN_UNITTEST == true){
-                        sh """
-                        """
+                        npm run cy:verify
+                        npm run cy:info
+                        npm run cy:version
                     }
                     else{
                         echo "Skipped UnitTest"
@@ -47,22 +47,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    if(params.WILL_DEPLOY == true){
-                        readFile('env.txt').split("\r?\n").each {
-                            def envItem = it.split("=")
-                            sh """
-                                sed -i "s|{_${envItem[0]}}|${envItem[1]}|g" ./common/deployments/app.yaml
-                            """
-                        }
-                        sh """
-                            rm -f Pipfile*
-                            gcloud config set project ${params.PROJECT_ID}
-                            sed -i 's/{_SERVICE_NAME}/${params.SERVICE_NAME}/' ./common/deployments/app.yaml
-                            cp ./common/deployments/app.yaml ./app.yaml
-                            gcloud app deploy app.yaml --project ${params.PROJECT_ID}  -v ${DEPLOY_VERSION}
-                            gcloud config set project rental-app-9015d
-                        """
-                        echo "Deploy ${GIT_BRANCH} branch to GCP is successful"
+                    
                     }
                     else{
                         echo "Don't deploy ${GIT_BRANCH} branch to GCP"
