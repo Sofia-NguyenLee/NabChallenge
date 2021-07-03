@@ -34,9 +34,9 @@ pipeline {
             steps {
                 script {
                     if(params.RUN_UNITTEST == true){
-                        npm run cy:verify
-                        npm run cy:info
-                        npm run cy:version
+                        npm run "cy:verify"
+                        npm run "cy:info"
+                        npm run "cy:version"
                     }
                     else{
                         echo "Skipped UnitTest"
