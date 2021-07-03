@@ -19,16 +19,16 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    echo "Build step"
-                    
                     def myRepo = checkout scm
                     def gitCommit = myRepo.GIT_COMMIT
                     GIT_BRANCH = myRepo.GIT_BRANCH
                     def shortGitCommit = "v-${gitCommit[0..6]}"
                     DEPLOY_VERSION = "${shortGitCommit}-${BUILD_NUMBER}"
 
-                    sh 'npm install'
-                    sh 'npm install -D cypress'
+                    echo "Build step"
+
+                    bat 'npm install'
+                    bat 'npm install -D cypress'
                 }
             }
         }
