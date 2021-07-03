@@ -1,9 +1,7 @@
 pipeline { 
     parameters {
     string defaultValue: '*/develop', description: 'branch to build', name: 'BRANCH_TO_BUILD', trim: false
-    string defaultValue: 'default', description: 'service name', name: 'SERVICE_NAME', trim: false
-    string defaultValue: 'platform-development-imv', description: 'project id', name: 'PROJECT_ID', trim: false
-    booleanParam defaultValue: true, description: 'Do you want deploy to gcp?', name: 'WILL_DEPLOY'
+    booleanParam defaultValue: true, description: 'Do you want run tests?', name: 'WILL_RUN'
     booleanParam defaultValue: true, description: 'Do you want run unittest?', name: 'RUN_UNITTEST'
     }
     environment {
@@ -36,9 +34,9 @@ pipeline {
             steps {
                 script {
                     if(params.RUN_UNITTEST == true){
-                        npm run "cy:verify"
-                        npm run "cy:info"
-                        npm run "cy:version"
+                        bat 'npm run "cy:verify"'
+                        bat 'npm run "cy:info"'
+                        bat 'npm run "cy:version"'
                     }
                     else{
                         echo "Skipped UnitTest"
@@ -46,14 +44,15 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
+        stage('Run') {
             steps {
                 script {
-                    if(params.WILL_DEPLOY == true){
-                        echo "deploying ${GIT_BRANCH} branch to GCP"
+                    if(params.WILL_RUN == true){
+                        echo "Start running tests"
+                        bat 'npm run "e2e:chrome"'
                     }
                     else{
-                        echo "Don't deploy ${GIT_BRANCH} branch to GCP"
+                        echo "Skipped running tests"
                     }
                     deleteDir()
                     echo "Record all issues is done"
