@@ -17,7 +17,7 @@
   },
   "scripts": {
     "cypress:open": "npx cypress open",
-    "cypress:run": "cypress run --record --key 0b2825f6-9585-473c-87ca-c285ea241aee",
+    "cypress:run": "cypress run --record --key 0b2a4f46-c2c3-411a-9947-5012f364f56a",
     "e2e:chrome": "npm run cypress:run --browser chrome",
     "e2e:firefox": "npm run cypress:run --browser firefox",
     "e2e:parallel": "npm run cypress:run --parallel",
