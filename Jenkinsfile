@@ -6,23 +6,31 @@ pipeline {
         }
 
         stage('Build') {
-            bat 'npm install'
-            bat 'npm install -D cypress'
+            steps {
+                script {
+                    bat 'npm install'
+                    bat 'npm install -D cypress'
 
-            bat 'npm run "cy:verify"'
-            bat 'npm run "cy:info"'
-            bat 'npm run "cy:version"'
+                    bat 'npm run "cy:verify"'
+                    bat 'npm run "cy:info"'
+                    bat 'npm run "cy:version"'
+                }
+            }
         }
 
         stage('Run test') {
-            echo "Running tests on Chrome"
-            bat 'npm run "e2e:chrome"'
+            steps {
+                script {
+                    echo "Running tests on Chrome"
+                    bat 'npm run "e2e:chrome"'
 
-            echo "Running tests on Firefox"
-            bat 'npm run "e2e:firefox"'
+                    echo "Running tests on Firefox"
+                    bat 'npm run "e2e:firefox"'
 
-            echo "Running tests parallel"
-            bat 'npm run "e2e:parallel"'
+                    echo "Running tests parallel"
+                    bat 'npm run "e2e:parallel"'
+                }
+            }
         }
     }
 }
