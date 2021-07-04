@@ -2,7 +2,12 @@ pipeline {
     agent any
     stages {
         stage ('Verify build') {
-            echo "Current working branch: $GIT_BRANCH"
+            steps {
+                script {                    
+                    echo "Checkou current working branch: $GIT_BRANCH"
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sofia-NguyenLee/NabChallenge.git']]])                    
+                }
+            }
         }
 
         stage('Build') {
